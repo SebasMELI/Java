@@ -2,26 +2,27 @@ package demo;
 
 public class RadixSort
 {
-    public static String[] radixSort(int []arr)
+    public static int[] radixSort(int []arr)
     {
         String[] arrString = StringUtil.toStringArray(arr);
-        StringUtil.sort(arrString, 1, '0');
-        StringUtil.sort(arrString, 2, '0');
-        StringUtil.sort(arrString, 3, '0');
-        StringUtil.sort(arrString, 4, '0');
-        StringUtil.sort(arrString, 5, '0');
+        StringUtil.lNormalize(arrString, '0');
+        StringUtil.sort(arrString, 1);
+        StringUtil.sort(arrString, 2);
+        StringUtil.sort(arrString, 3);
+        StringUtil.sort(arrString, 4);
+        StringUtil.sort(arrString, 5);
 
-        return arrString;
+        return StringUtil.toIntArray(arrString);
     }
 
     public static void main(String[] args)
     {
         int arr[]={16223,898,13,906,235,23,9,1532,6388,2511,8};
-        String[] arrString = radixSort(arr);
+        arr = radixSort(arr);
 
-        for(int i=0; i<arrString.length;i++)
+        for(int i=0; i<arr.length;i++)
         {
-            System.out.print(arrString[i]+(i<arrString.length-1?",":""));
+            System.out.print(arr[i]+(i<arr.length-1?",":""));
         }
 
     }

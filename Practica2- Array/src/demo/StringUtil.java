@@ -71,10 +71,9 @@ public class StringUtil
     }
 
 
-    public static String[] sort(String[] arrString, int sort, char cSort)
+    public static String[] sort(String[] arrString, int sort)
     {
         List<String> numeros = new ArrayList<>();
-        StringUtil.lNormalize(arrString, cSort);
         int arrStringLength = arrString.length;
 
         List<String> lista0 = new ArrayList<>();
@@ -119,7 +118,7 @@ public class StringUtil
         for (int i = 0; i < arrStringLength; i++)
             arrString[i] = numeros.get(i);
 
-        return  arrString;
+        return arrString;
     }
 
 }
