@@ -5,12 +5,11 @@ public class RadixSort
     public static int[] radixSort(int []arr)
     {
         String[] arrString = StringUtil.toStringArray(arr);
+        int arrMaxLength = StringUtil.maxLength(arrString);
         StringUtil.lNormalize(arrString, '0');
-        StringUtil.sort(arrString, 1);
-        StringUtil.sort(arrString, 2);
-        StringUtil.sort(arrString, 3);
-        StringUtil.sort(arrString, 4);
-        StringUtil.sort(arrString, 5);
+
+        for (int i = 1; i <= arrMaxLength; i++)
+            StringUtil.sort(arrString, i);
 
         return StringUtil.toIntArray(arrString);
     }
