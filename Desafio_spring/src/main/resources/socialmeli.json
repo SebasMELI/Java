@@ -1,0 +1,30 @@
+[
+  {
+    "userId": 1,
+    "userName": "Usuario1",
+    "followers_count": 1,
+    "followed": [],
+    "followers": []
+  },
+  {
+    "userId": 2,
+    "userName": "Usuario2",
+    "followers_count": 1,
+    "followed": [],
+    "followers": []
+  },
+  {
+    "userId": 3,
+    "userName": "Usuario3",
+    "followers_count": 1,
+    "followed": [],
+    "followers": []
+  },
+  {
+    "userId": 4,
+    "userName": "Usuario3",
+    "followers_count": 1,
+    "followed": [],
+    "followers": []
+  }
+]
