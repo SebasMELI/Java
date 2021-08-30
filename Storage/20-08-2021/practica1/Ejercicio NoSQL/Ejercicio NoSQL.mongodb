@@ -1,0 +1,24 @@
+
+use('sample_restaurants');
+
+
+//Ejercicio 1
+
+db.restaurants.find(
+  {"grades": {$elemMatch: { grade: /A/, score: {$gte: 21}}}}
+).limit(3)
+
+
+//Ejercicio 2
+
+db.restaurants.find(
+  {"address.coord": []}
+).count()
+
+
+//Ejercicio 3
+
+db.restaurants.find(
+  {},
+  {name: 1, borough: 1, cuisine: 1, grades: { $slice: -1 }}
+).limit(3)
