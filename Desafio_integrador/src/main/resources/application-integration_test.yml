@@ -1,0 +1,14 @@
+# Properties file for integration tests
+# Overrides application.yml default properties
+
+spring:
+  datasource:
+    url: jdbc:h2://tmp/mem/db;MODE=MySQL;DATABASE_TO_LOWER=TRUE;CASE_INSENSITIVE_IDENTIFIERS=TRUE;DB_CLOSE_DELAY=-1;AUTO_SERVER=TRUE;DB_CLOSE_ON_EXIT=FALSE
+    username: sa
+    password:
+    maximum-pool-size: 3
+    driverClassName: org.h2.Driver
+  jpa:
+    show-sql: true
+    hibernate:
+      ddl-auto: create-drop

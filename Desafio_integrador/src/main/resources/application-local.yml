@@ -1,0 +1,14 @@
+# Properties file for local/dev environment
+# You need to configure the environment variable in your IDE, more info in README.md
+# Overrides application.yml default properties
+
+spring:
+  datasource:
+    driverClassName: com.mysql.cj.jdbc.Driver
+    username: juansmartine
+    password: 5UX4YTVV
+    url: jdbc:mysql://proxysql.master.meliseginf.com:6612/databasese?useSSL=true&serverTimezone=UTC&characterEncoding=UTF-8
+  jpa:
+    show-sql: false
+    hibernate:
+      ddl-auto: update
